@@ -52,7 +52,15 @@ public class Hello extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-
+public static void main(String[] args) {
+        java.awt.EventQueue.invokeLater( new Runnable() {
+//            @Override
+            public void run() {
+                new XuatNhap().setVisible(true);
+            }
+        });
+        
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
