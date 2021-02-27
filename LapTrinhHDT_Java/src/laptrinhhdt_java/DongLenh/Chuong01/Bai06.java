@@ -38,6 +38,7 @@ public class Bai06 {
                 + df.format(sinhvien.getNgaySinh()) + "; Trường học : " + sinhvien.getTruongHoc()
                 + "; Địa chỉ : " + sinhvien.getDiaChi());
 
+        System.out.println(sinhvien.calcTax(1200));
         Worker congnhan = new Worker();
         congnhan.setHoTen("Nguyễn Thị C");
         congnhan.setGioiTinh(0);
@@ -48,6 +49,6 @@ public class Bai06 {
                 + congnhan.getGioiTinh() + "; Ngày sinh : "
                 + df.format(congnhan.getNgaySinh())
                 + "; Trường học : " + congnhan.getCongTy());
-
+        System.out.println(congnhan.calcTax(1200));
     }
 }

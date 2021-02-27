@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author Admin
  */
-public class Worker extends Person{
+public class Worker extends Person implements  TaxInterface{
  
     private String CongTy;
 
@@ -33,6 +33,11 @@ public class Worker extends Person{
 
     public void setCongTy(String CongTy) {
         this.CongTy = CongTy;
+    }
+
+    @Override
+    public double calcTax(double income) {
+       return  income*0.04;
     }
     
 }

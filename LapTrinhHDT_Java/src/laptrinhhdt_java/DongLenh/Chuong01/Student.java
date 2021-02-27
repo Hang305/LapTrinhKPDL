@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author Admin
  */
-public class Student  extends  Person{
+public class Student  extends  Person implements  TaxInterface{
     
     private String TruongHoc;
     private String DiaChi;
@@ -44,6 +44,11 @@ public class Student  extends  Person{
 
     public void setDiaChi(String DiaChi) {
         this.DiaChi = DiaChi;
+    }
+
+    @Override
+    public double calcTax(double income) {
+      return income *0.01;
     }
     
     
