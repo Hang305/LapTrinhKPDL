@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="laptrinhhdt_java.chuong02.logicLayer">
+  <ClassDiagramComponents>
+    <Class name="PhuongTrinhBac1" package="laptrinhhdt_java.chuong02.logicLayer" visibility="public" xPosition="156.0" yPosition="20.0">
+      <Fields>
+        <Field name="a" type="double" visibility="private"/>
+        <Field name="b" type="double" visibility="private"/>
+        <Field name="nghiem_x" type="double" visibility="private"/>
+        <Field name="ketqua" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="a"/>
+          <Argument type="double" name="b"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="GiaiPhuongTrinh" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getKetqua" returnType="String" visibility="public"/>
+        <Method name="setKetqua" returnType="void" visibility="public">
+          <Argument type="String" name="ketqua"/>
+        </Method>
+        <Method name="getA" returnType="double" visibility="public"/>
+        <Method name="setA" returnType="void" visibility="public">
+          <Argument type="double" name="a"/>
+        </Method>
+        <Method name="getB" returnType="double" visibility="public"/>
+        <Method name="setB" returnType="void" visibility="public">
+          <Argument type="double" name="b"/>
+        </Method>
+        <Method name="getNghiem_x" returnType="double" visibility="public"/>
+        <Method name="setNghiem_x" returnType="void" visibility="public">
+          <Argument type="double" name="nghiem_x"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PhuongTrinhBac2" package="laptrinhhdt_java.chuong02.logicLayer" visibility="public" xPosition="553.0" yPosition="254.0">
+      <Fields>
+        <Field name="a" type="double" visibility="private"/>
+        <Field name="b" type="double" visibility="private"/>
+        <Field name="c" type="double" visibility="private"/>
+        <Field name="x1" type="double" visibility="private"/>
+        <Field name="x2" type="double" visibility="private"/>
+        <Field name="ketqua" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="a"/>
+          <Argument type="double" name="b"/>
+          <Argument type="double" name="c"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="GiaiPhuongTrinh" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getA" returnType="double" visibility="public"/>
+        <Method name="setA" returnType="void" visibility="public">
+          <Argument type="double" name="a"/>
+        </Method>
+        <Method name="getB" returnType="double" visibility="public"/>
+        <Method name="setB" returnType="void" visibility="public">
+          <Argument type="double" name="b"/>
+        </Method>
+        <Method name="getC" returnType="double" visibility="public"/>
+        <Method name="setC" returnType="void" visibility="public">
+          <Argument type="double" name="c"/>
+        </Method>
+        <Method name="getX1" returnType="double" visibility="public"/>
+        <Method name="setX1" returnType="void" visibility="public">
+          <Argument type="double" name="x1"/>
+        </Method>
+        <Method name="getX2" returnType="double" visibility="public"/>
+        <Method name="setX2" returnType="void" visibility="public">
+          <Argument type="double" name="x2"/>
+        </Method>
+        <Method name="getKetqua" returnType="String" visibility="public"/>
+        <Method name="setKetqua" returnType="void" visibility="public">
+          <Argument type="String" name="ketqua"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="PhuongTrinhInterface" package="laptrinhhdt_java.chuong02.logicLayer" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Methods>
+        <Method name="GiaiPhuongTrinh" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="laptrinhhdt_java.chuong02.logicLayer.PhuongTrinhBac1" target="laptrinhhdt_java.chuong02.logicLayer.PhuongTrinhInterface"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="laptrinhhdt_java.chuong02.logicLayer.PhuongTrinhBac2" target="laptrinhhdt_java.chuong02.logicLayer.PhuongTrinhInterface"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
