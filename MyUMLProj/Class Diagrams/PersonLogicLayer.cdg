@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PersonLogicLayer">
+  <ClassDiagramComponents>
+    <Class name="Nguoi" package="personLogic" visibility="public" xPosition="115.0" yPosition="89.0">
+      <Fields>
+        <Field name="Hoten" type="String" visibility="private"/>
+        <Field name="NgaySinh" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Interface name="ThueInterface" package="" visibility="public" xPosition="342.0" yPosition="89.0">
+      <Methods>
+        <Method name="TinhThue" returnType="double" visibility="public">
+          <Argument type="double" name="ThuNhap"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="SinhVien" package="personLogic" visibility="public" xPosition="115.0" yPosition="400.0">
+      <Fields>
+        <Field name="Truong" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="CongNhan" package="personLogic" visibility="public" xPosition="354.0" yPosition="400.0">
+      <Fields>
+        <Field name="CongTy" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="personLogic.CongNhan" target="ThueInterface"/>
+    <IsRelation name="is" source="personLogic.CongNhan" target="personLogic.Nguoi"/>
+    <IsRelation name="is" source="personLogic.SinhVien" target="personLogic.Nguoi"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="personLogic.SinhVien" target="ThueInterface"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

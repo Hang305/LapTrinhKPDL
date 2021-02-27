@@ -60,8 +60,7 @@ public class Person {
         }
         else {
             return  "Nữ";
-        }
-            
+        }  
     }
 
     
