@@ -122,9 +122,7 @@ public class CRJFrame extends javax.swing.JFrame {
                 Integer.parseInt(txtLowerX.getText()),
                 Integer.parseInt(txtLowerY.getText())
         );
-        String result = "Diện tích của hình chữ nhật : " + hcn.calcArea();
-        result += " ,Chu vi của hình chữ nhật : " + hcn.calcPermeter();
-        txtKQ.append(result);
+        txtKQ.append(hcn.toString());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

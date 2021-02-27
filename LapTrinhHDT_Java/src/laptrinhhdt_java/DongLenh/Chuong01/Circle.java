@@ -9,7 +9,7 @@ package laptrinhhdt_java.DongLenh.Chuong01;
  *
  * @author Admin
  */
-public class Circle {
+public class Circle  extends shape{
     
     private int radius;
     private int x,y;
@@ -22,13 +22,19 @@ public class Circle {
         this.x = x;
         this.y = y;
     }
-    public double calcPerimeter(){
-        double result = 2*Math.PI*this.radius;
-        return  result;
+    @Override
+    public  double calcPerimeter(){
+        return 2*Math.PI*this.radius;
+   
     }
+    @Override
+    public String toString() {
+     return "Chu vi của hình chữ tròn là: "+ calcPerimeter() + "; Diện tích : " +calcArea();//To change body of generated methods, choose Tools | Templates.
+    }
+    @Override
     public double calcArea(){
-        double result = Math.PI*this.radius*this.radius;
-        return  result;
+       return  Math.PI*this.radius*this.radius;
+       
     }
 
     public int getRadius() {

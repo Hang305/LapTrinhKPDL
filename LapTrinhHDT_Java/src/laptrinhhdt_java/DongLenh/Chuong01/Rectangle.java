@@ -9,7 +9,7 @@ package laptrinhhdt_java.DongLenh.Chuong01;
  *
  * @author Admin
  */
-public class Rectangle {
+public class Rectangle  extends shape{
     private int upper_x, upper_y,lower_x,lower_y;
 
     public Rectangle() {
@@ -21,9 +21,17 @@ public class Rectangle {
         this.lower_x = lower_x;
         this.lower_y = lower_y;
     }
-    public double calcPermeter(){
+    @Override
+    public double calcPerimeter(){
        return (2*Math.abs(upper_y- lower_y)*Math.abs(upper_x- lower_x));
     }
+
+    @Override
+    public String toString() {
+     return "Chu vi của hình chữ nhật là: "+ calcPerimeter() + "; Diện tích : " +calcArea();//To change body of generated methods, choose Tools | Templates.
+    }
+    
+    @Override
     public  double calcArea(){
         return Math.abs((upper_y- lower_y)*Math.abs(upper_x- lower_x));
     }

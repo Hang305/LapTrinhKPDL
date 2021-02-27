@@ -12,12 +12,13 @@ package laptrinhhdt_java.DongLenh.Chuong01;
 public class Bai04 {
 
     public static void main(String[] args) {
-        Circle htron = new Circle(5, 1, 2);
-        System.out.println("Chu vi của hình tròn :" + htron.calcPerimeter());
-        System.out.println("Diện của hình tròn :" + htron.calcArea());
-
-        Rectangle hcn = new Rectangle(3,15,8,5);
-        System.out.println("Chu vi của hình chữ nhật :" + hcn.calcPermeter());
-        System.out.println("Diện của hình chữ nhật :" + hcn.calcArea());
+        shape htron = new Circle(5, 1, 2);
+//        System.out.println("Chu vi của hình tròn :" + htron.calcPerimeter());
+//        System.out.println("Diện của hình tròn :" + htron.calcArea());
+        System.out.println(htron);
+        shape hcn = new Rectangle(3, 15, 8, 5);
+//        System.out.println("Chu vi của hình chữ nhật :" + hcn.calcPerimeter());
+//        System.out.println("Diện của hình chữ nhật :" + hcn.calcArea());
+        System.out.println(hcn);
     }
 }
