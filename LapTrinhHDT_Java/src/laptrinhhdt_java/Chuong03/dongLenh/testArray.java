@@ -59,6 +59,22 @@ public class testArray {
             c[i] = rdn.nextInt(1000);
         }
         System.out.println(Arrays.toString(c));
+        //sắp xếp mảng tăng dần
+//        int temp;
+//        for (int i = 0; i < n + 1; i++) {
+//            for (int j = i; j < n; j++) {
+//                if (c[i] > c[j]) {
+//                    temp = c[i];
+//                    c[i] = c[j];
+//                    c[j] = temp;
+//                }
+//            }
+//        }
+//        System.out.println(Arrays.toString(c));
+
+// sắp xếp mảng theo thư viện sort
+        Arrays.sort(c);
+        System.out.println(Arrays.toString(c));
     }
 
 }
