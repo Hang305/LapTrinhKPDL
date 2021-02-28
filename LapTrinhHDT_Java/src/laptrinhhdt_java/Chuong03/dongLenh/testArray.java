@@ -75,6 +75,31 @@ public class testArray {
 // sắp xếp mảng theo thư viện sort
         Arrays.sort(c);
         System.out.println(Arrays.toString(c));
+        
+        //Tìm kiếm vét cạn
+        System.out.print("Nhap gia tri can tim kiem = ");
+        input = sc.nextLine();
+        int x = Integer.parseInt(input);
+//        boolean flag = false;
+//        for (int i = 0; i < c.length; i++) {
+//            if (c[i]== x) {
+//                flag = true;
+//                System.out.println("Gia tri can tim kiem có trong mang tai vi tri " +i);
+//                break;
+//            }
+//        }
+//        if (!flag) {
+//            System.out.println("Gia tri can tim kiem khong có trong mang " );
+//        }
+        //tìm kiếm sắp xếp
+        
+        int index = Arrays.binarySearch(c, x);
+        if (index <0) {
+            System.out.println("Khong tim thay" );
+        }
+        else{
+             System.out.println("Gia tri can tim kiem có trong mang tai vi tri " +index);
+        }
     }
 
 }
