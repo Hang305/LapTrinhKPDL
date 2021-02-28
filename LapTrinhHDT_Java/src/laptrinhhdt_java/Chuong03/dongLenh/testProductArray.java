@@ -42,15 +42,15 @@ public class testProductArray {
 //                }
 //            }
 ////        }
-//sắp xếp mảng theo giá cả
+        //sắp xếp mảng theo giá cả
         Arrays.sort(sp, new ProductCompByPrice());
         System.out.println("Mang sap xep tang dan theo gia ca ");
         System.out.print(Arrays.toString(sp));
-         Arrays.sort(sp, new ProductCompByName());
-          System.out.println("Mang sap xep tang dan theo san pham ");
+        //sắp xếp theo tên sản phẩm
+        Arrays.sort(sp, new ProductCompByName());
+        System.out.println("Mang sap xep tang dan theo san pham ");
         System.out.print(Arrays.toString(sp));
-        
-        
+
     }
-    
+
 }
