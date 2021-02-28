@@ -5,6 +5,10 @@
  */
 package laptrinhhdt_java.Chuong03.dohoa;
 
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import laptrinhhdt_java.Chuong03.dohoa.frames.MyCoffee;
 import laptrinhhdt_java.Chuong03.dohoa.frames.XuatDuLieuFrame;
 
 /**
@@ -14,6 +18,7 @@ import laptrinhhdt_java.Chuong03.dohoa.frames.XuatDuLieuFrame;
 public class MyMainForm extends javax.swing.JFrame {
 
     XuatDuLieuFrame frm;
+    MyCoffee frmCf;
 
     /**
      * Creates new form MyMainForm
@@ -37,6 +42,7 @@ public class MyMainForm extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         txtMang1chieu = new javax.swing.JMenuItem();
+        tctCoffee = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Chương trình thao tác với mảng 1 chiều");
@@ -65,6 +71,11 @@ public class MyMainForm extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Mảng");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
 
         txtMang1chieu.setText("Mảng 1 chiều");
         txtMang1chieu.addActionListener(new java.awt.event.ActionListener() {
@@ -73,6 +84,14 @@ public class MyMainForm extends javax.swing.JFrame {
             }
         });
         jMenu2.add(txtMang1chieu);
+
+        tctCoffee.setText("Coffee");
+        tctCoffee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tctCoffeeActionPerformed(evt);
+            }
+        });
+        jMenu2.add(tctCoffee);
 
         jMenuBar1.add(jMenu2);
 
@@ -101,11 +120,39 @@ public class MyMainForm extends javax.swing.JFrame {
         if (frm == null || frm.isClosed()) {
             frm = new XuatDuLieuFrame();
             desktop.add(frm);
-            frm.setLocation(this.getWidth()/2 -frm.getWidth()/2, this.getHeight()/2 - frm.getHeight()/2);
+            frm.setLocation(this.getWidth() / 2 - frm.getWidth() / 2, this.getHeight() / 2 - frm.getHeight() / 2);
             frm.setVisible(true);
         }
 
     }//GEN-LAST:event_txtMang1chieuActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        // TODO add your handling code here:
+        if (frmCf == null || frmCf.isClosed()) {
+            try {
+                frmCf = new MyCoffee();
+                desktop.add(frmCf);
+                frmCf.setLocation(this.getWidth() / 2 - frm.getWidth() / 2, this.getHeight() / 2 - frm.getHeight() / 2);
+                frmCf.setVisible(true);
+            } catch (ParseException ex) {
+                Logger.getLogger(MyMainForm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void tctCoffeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tctCoffeeActionPerformed
+        // TODO add your handling code here:
+         if (frmCf == null || frmCf.isClosed()) {
+            try {
+                frmCf = new MyCoffee();
+                desktop.add(frmCf);
+                frmCf.setLocation(this.getWidth() / 2 - frmCf.getWidth() / 2, this.getHeight() / 2 - frmCf.getHeight() / 2);
+                frmCf.setVisible(true);
+            } catch (ParseException ex) {
+                Logger.getLogger(MyMainForm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_tctCoffeeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,6 +195,7 @@ public class MyMainForm extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem tctCoffee;
     private javax.swing.JMenuItem txtMang1chieu;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="laptrinhhdt_java.Chuong03.coffeeLogic">
+  <ClassDiagramComponents>
+    <Class name="CoffeeShop" package="laptrinhhdt_java.Chuong03.coffeeLogic" visibility="public" xPosition="-8.0" yPosition="20.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Manager" package="laptrinhhdt_java.Chuong03.coffeeLogic" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="shops" type="CoffeeShop[]" visibility="private"/>
+        <Field name="income" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="CoffeeShop[]" name="shops"/>
+          <Argument type="double" name="income"/>
+          <Argument type="String" name="HoTen"/>
+          <Argument type="int" name="GioiTinh"/>
+          <Argument type="Date" name="NgaySinh"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getShops" returnType="CoffeeShop[]" visibility="public"/>
+        <Method name="setShops" returnType="void" visibility="public">
+          <Argument type="CoffeeShop[]" name="shops"/>
+        </Method>
+        <Method name="getIncome" returnType="double" visibility="public"/>
+        <Method name="setIncome" returnType="void" visibility="public">
+          <Argument type="double" name="income"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Person" package="laptrinhhdt_java.Chuong03.coffeeLogic" visibility="public" xPosition="332.0" yPosition="337.0">
+      <Fields>
+        <Field name="HoTen" type="String" visibility="private"/>
+        <Field name="GioiTinh" type="int" visibility="private"/>
+        <Field name="NgaySinh" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="HoTen"/>
+          <Argument type="int" name="GioiTinh"/>
+          <Argument type="Date" name="NgaySinh"/>
+        </Constructor>
+        <Constructor visibility="package">
+          <Argument type="String" name="nguyen_Van_A"/>
+          <Argument type="boolean" name="b"/>
+          <Argument type="String" name="input"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getHoTen" returnType="String" visibility="public"/>
+        <Method name="setHoTen" returnType="void" visibility="public">
+          <Argument type="String" name="HoTen"/>
+        </Method>
+        <Method name="isGioiTinh" returnType="int" visibility="public"/>
+        <Method name="setGioiTinh" returnType="void" visibility="public">
+          <Argument type="int" name="GioiTinh"/>
+        </Method>
+        <Method name="getNgaySinh" returnType="Date" visibility="public"/>
+        <Method name="setNgaySinh" returnType="void" visibility="public">
+          <Argument type="Date" name="NgaySinh"/>
+        </Method>
+        <Method name="getGioiTinh" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="laptrinhhdt_java.Chuong03.coffeeLogic.Manager" target="laptrinhhdt_java.Chuong03.coffeeLogic.Person"/>
+    <UseRelation source="laptrinhhdt_java.Chuong03.coffeeLogic.Manager" target="laptrinhhdt_java.Chuong03.coffeeLogic.CoffeeShop" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
