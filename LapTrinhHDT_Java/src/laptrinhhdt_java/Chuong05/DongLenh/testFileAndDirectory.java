@@ -31,7 +31,7 @@ public class testFileAndDirectory {
 //        File[] taptin = fo.getFiles(content);
 //        System.out.println("Danh sách các tập tin :");
 //        System.out.println(fo.displayContent(taptin));
-fo.getContentRecursively("F:\\DAIHOC");
+        fo.getContentRecursively("F:\\DAIHOC");
 
     }
 
