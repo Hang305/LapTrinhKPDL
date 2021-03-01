@@ -5,8 +5,15 @@
  */
 package laptrinhhdt_java.Chuong05.Logic;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import oracle.jrockit.jfr.events.ContentTypeImpl;
 
 /**
  *
@@ -75,5 +82,49 @@ public class FileAndDirectoryOperation {
             for (int i = 0; i < sub.length; i++) {
                 getContentRecursively(folder +File.separator +sub[i].getName());
         }
+    }
+    //tao tác đọc file văn bản
+    public String readTextFile(String filename) throws FileNotFoundException, IOException{
+        StringBuilder content = new StringBuilder();
+        
+        //dùng bộ đệm
+        try ( // mở file
+                FileReader fr = new FileReader(filename)) {
+            //dùng bộ đệm
+            BufferedReader br = new BufferedReader(fr);
+            
+            String line = null;
+            while ((line= br.readLine()) != null) {
+                content.append(line);
+                content.append("\n");
+            }
+            //đóng file
+            br.close();
+        }
+        catch (FileNotFoundException ex){
+            return "Không tìm thấy file " + filename;
+        }
+        catch (IOException ex){
+            return "Không thể đọc file " + filename;
+        }
+        return content.toString();
+    }
+    public boolean writeTextFile(String filename, String content) throws IOException{
+        boolean  flag = false;
+        //sử dụng buffer
+        try ( //mở file
+                FileWriter fw = new FileWriter(filename)) {
+            //sử dụng buffer
+            BufferedWriter bw = new BufferedWriter(fw);
+            //ghi ra file
+            bw.write(content);
+            //đóng file
+            bw.flush();
+            bw.close();
+        }
+        catch(IOException ex){
+            return  false;
+        }
+        return flag;
     }
 }
