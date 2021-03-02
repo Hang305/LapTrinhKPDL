@@ -122,7 +122,7 @@ public class MyTestDemo extends javax.swing.JFrame {
             
             //lưu file
             FileAndDirectoryOperation fo= new FileAndDirectoryOperation();
-            boolean result;
+            boolean result = false;
             try {
                 result = fo.writeTextFile(file.getAbsolutePath(), this.jTextArea.getText());
             } catch (IOException ex) {
